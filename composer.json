@@ -1,7 +1,6 @@
 {
-  "name": "bazaarvoice/bazaarvoice-magento2-ext",
-  "description": "Bazaarvoice Magento 2 Integration Extension",
-  "type": "magento2-module",
+  "name": "blubolt/bazaarvoice",
+  "description": "Bazaarvoice Integration Extension",
   "license": [ "MIT" ],
   "authors": [
     {
@@ -11,11 +10,8 @@
   ],
   "version": "7.0.5",
   "autoload": {
-    "files": [
-      "registration.php"
-    ],
     "psr-4": {
-      "Bazaarvoice\\Connector\\": ""
+      "Blubolt\\Bazaarvoice\\": "lib"
     }
   }
 }

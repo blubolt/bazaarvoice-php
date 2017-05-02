@@ -1,5 +1,7 @@
 <?php
 
+namespace Blubolt\Bazaarvoice;
+
 /**
  * BV PHP SEO SDK
  *

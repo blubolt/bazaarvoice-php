@@ -1,5 +1,7 @@
 <?php
 
+namespace Blubolt\Bazaarvoice;
+
 /**
  * Tick function for execTimer.
  *

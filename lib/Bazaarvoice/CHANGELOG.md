@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.0
+
+* Blubolt custom build with namespaces, yo.
+
 ## 3.2.0
 
 * Pass-through of User Agent to gather statistics.
