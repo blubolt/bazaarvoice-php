@@ -8,7 +8,6 @@
       "email": "dennis@storefrontconsulting.com"
     }
   ],
-  "version": "7.0.5",
   "autoload": {
     "psr-4": {
       "Blubolt\\Bazaarvoice\\": "lib"
