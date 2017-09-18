@@ -10,7 +10,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Blubolt\\Bazaarvoice\\": "lib"
+      "Blubolt\\Bazaarvoice\\": "lib/Bazaarvoice"
     }
   }
 }
