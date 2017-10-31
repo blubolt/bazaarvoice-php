@@ -172,28 +172,28 @@ class BV {
         case 'spotlights': $this->SEO = $this->spotlights;
           break;
         default:
-          throw new Exception('Invalid content_type value provided: ' . $this->config['content_type']);
+          throw new \Exception('Invalid content_type value provided: ' . $this->config['content_type']);
       }
     }
   }
 
   protected function validateParameters($params) {
     if (!is_array($params)) {
-      throw new Exception(
+      throw new \Exception(
         'BV class constructor argument $params must be an array.'
       );
     }
 
     // check to make sure we have the required parameters.
     if (empty($params['bv_root_folder'])) {
-      throw new Exception(
+      throw new \Exception(
         'BV class constructor argument $params is missing required bv_root_folder key. An ' .
         'array containing bv_root_folder (string) is expected.'
         );
     }
 
     if (empty($params['subject_id'])) {
-      throw new Exception(
+      throw new \Exception(
         'BV class constructor argument $params is missing required subject_id key. An ' .
         'array containing subject_id (string) is expected.'
       );
@@ -242,7 +242,7 @@ class Base {
 
   protected function validateParams($params) {
     if (!is_array($params)) {
-      throw new Exception('BV Base Class missing config array.');
+      throw new \Exception('BV Base Class missing config array.');
     }
   }
 
@@ -428,7 +428,7 @@ class Base {
       try {
         BVUtility::execTimer($this->config['latency_timeout'], $isBot, $this->start_time);
         $payload = $this->_getFullSeoContents($access_method);
-      } catch (Exception $e) {
+      } catch (\Exception $e) {
         $this->_setBuildMessage($e->getMessage());
       }
       BVUtility::stopTimer();
