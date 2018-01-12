@@ -14,7 +14,7 @@ function tick_timer($start, $exec_time, $is_bot) {
   if ((microtime(1) - $start) > $exec_time) {
     if ($once) {
       $once = false;
-      throw new Exception('Execution timed out' . ($is_bot ? ' for search bot' : '') . ', exceeded ' . $exec_time * 1000 . 'ms');
+      throw new \Exception('Execution timed out' . ($is_bot ? ' for search bot' : '') . ', exceeded ' . $exec_time * 1000 . 'ms');
     }
   }
 }
@@ -51,7 +51,7 @@ class BVUtility {
     if (empty($start)) {
       $start = microtime(1);
     }
-    register_tick_function('tick_timer', $start, $exec_time, $is_bot);
+    register_tick_function('\\Blubolt\\Bazaarvoice\\tick_timer', $start, $exec_time, $is_bot);
   }
 
   /**
@@ -60,7 +60,7 @@ class BVUtility {
    * @access public
    */
   public static function stopTimer() {
-    unregister_tick_function('tick_timer');
+    unregister_tick_function('\\Blubolt\\Bazaarvoice\\tick_timer');
   }
 
   /**
